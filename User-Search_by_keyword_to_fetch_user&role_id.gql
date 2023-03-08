@@ -1,0 +1,37 @@
+query UsersQuery{
+  allUsersOnAccountConnection(emailFilter: "parag") {
+    edges {
+      node {
+        id,
+        email
+        roles {
+          id
+        }
+        
+      }
+    }
+  }
+}
+
+
+# ***************
+#OUTPUT:
+#{
+#  "data": {
+#    "allUsersOnAccountConnection": {
+#      "edges": [
+#        {
+#          "node": {
+#            "id": "auth0|608ac49abb3546006994c344",
+#            "email": "parag.x@domain.com",
+#            "roles": [
+#              {
+#                "id": "00000000-0000-0000-0000-000000000000"
+#              }
+#            ]
+#          }
+#        }
+#      ]
+#    }
+#  }
+#}
