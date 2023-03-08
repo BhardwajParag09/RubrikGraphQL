@@ -1,0 +1,29 @@
+query {
+    currentUser {
+        email
+        roles {
+            name
+          	id
+          orgId
+        }
+    }
+}
+
+
+
+# ***************
+#OUTPUT:
+#{
+# "data": {
+#    "currentUser": {
+#      "email": "parag.x@domain.com",
+#      "roles": [
+#        {
+#          "name": "Administrator",
+#          "id": "00000000-0000-0000-0000-000000000000",
+#          "orgId": ""
+#        }
+#      ]
+#    }
+#  }
+#}
