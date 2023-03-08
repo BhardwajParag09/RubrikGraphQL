@@ -1,0 +1,12 @@
+
+mutation SetUserRoleMutation{
+  updateRoleAssignments(userIds: "auth0|63d9015c00d516cd69893e57", roleIds: "00000000-0000-0000-0000-000000000000")
+}
+
+
+#OUTPUT:
+#{
+#  "data": {
+#    "updateRoleAssignments": true
+#  }
+#}
