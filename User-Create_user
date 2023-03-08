@@ -1,0 +1,13 @@
+#User gets an invite to login. You can get the role ID's from the other Query first and then use this to create a new user.
+
+mutation InviteUserMutation {
+  createUser(email: "parag.x@domain.com", roleIds: "00000000-0000-0000-0000-000000000000")
+}
+
+
+#OUTPUT:
+#{
+#  "data": {
+#    "createUser": "auth0|608ac49abb3546006994c344"
+#  }
+#}
