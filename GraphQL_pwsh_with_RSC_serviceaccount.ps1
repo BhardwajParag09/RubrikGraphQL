@@ -32,6 +32,6 @@ $variable=(Get-Content -Raw ./variables)
 
 $body = @{"query" = $data; "variables" = $variable}
 
-$result = Invoke-RestMethod -Method Post -Uri "https://rubrik-support.my.rubrik.com/api/graphql" -Headers $headers -Body ($body | ConvertTo-Json)
+$result = Invoke-RestMethod -Method Post -Uri "https://ACCOUNT.my.rubrik.com/api/graphql" -Headers $headers -Body ($body | ConvertTo-Json)
 
 Write-Output ($result | ConvertTo-Json -Depth 100)
