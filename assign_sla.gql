@@ -1,0 +1,53 @@
+
+mutation BulkAssignSlasMutation($input: BulkAssignSlasInput!) {
+  bulkAssignSlas(input: $input) {
+    slaAssignResults {
+      success
+      __typename
+    }
+    __typename
+  }
+}
+
+
+**********
+
+VARIABLES:
+
+{
+  "input": {
+    "assignSlaRequests": [
+      {
+        "slaDomainAssignType": "protectWithSlaId",
+        "objectIds": [
+          "c85a4299-f1a8-4509086a"
+        ],
+        "shouldApplyToExistingSnapshots": true,
+        "shouldApplyToNonPolicySnapshots": false,
+        "slaOptionalId": "b682982f-342d6540052c",
+        "existingSnapshotRetention": null
+      }
+    ],
+    "parentObjectIdToConflictObjectIdsMap": [],
+    "userNote": ""
+  }
+}
+
+
+****OUTPUT:*****
+
+{
+  "data": {
+    "bulkAssignSlas": {
+      "slaAssignResults": [
+        [
+          {
+            "success": true,
+            "__typename": "SlaAssignResult"
+          }
+        ]
+      ],
+      "__typename": "BulkAssignSlasReply"
+    }
+  }
+}
