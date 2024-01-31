@@ -1,0 +1,27 @@
+query SLAListQuery($after: String, $first: Int, $filter: [GlobalSlaFilterInput!], $sortBy: SlaQuerySortByField, $sortOrder: SortOrder, $shouldShowProtectedObjectCount: Boolean, $shouldShowPausedClusters: Boolean = false) {
+  slaDomains(after: $after, first: $first, filter: $filter, sortBy: $sortBy, sortOrder: $sortOrder, shouldShowProtectedObjectCount: $shouldShowProtectedObjectCount, shouldShowPausedClusters: $shouldShowPausedClusters) {
+    edges {
+      cursor
+      node {
+        name
+        ... on ClusterSlaDomain {
+          id: fid
+          }
+      }
+
+    }
+  }  
+}
+
+
+
+VARIABLES:
+{
+  "shouldShowPausedClusters": true,
+  "filter": [],
+  "sortBy": "NAME",
+  "sortOrder": "ASC",
+  "shouldShowProtectedObjectCount": true,
+  "first": 50
+}
+
